@@ -52,3 +52,15 @@ int GetSum(int A)
 return sum;
 }
 Console.WriteLine($"Сумма чисел от 1 до {limit} = {GetSum(limit)}");*/
+
+
+//на вход число и посчитать кол-во цифр в числе
+Console.WriteLine("введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+while(number>=0)
+{
+    number=number/10;
+    count++;
+}
+Console.WriteLine(count);
