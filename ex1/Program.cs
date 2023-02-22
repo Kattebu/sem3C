@@ -55,12 +55,46 @@ Console.WriteLine($"Сумма чисел от 1 до {limit} = {GetSum(limit)}"
 
 
 //на вход число и посчитать кол-во цифр в числе
-Console.WriteLine("введите число: ");
+/*Console.WriteLine("введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int count = 1;
-while(number>=0)
+int count = 0;
+while(number>0)
 {
     number=number/10;
     count++;
 }
-Console.WriteLine(count);
+Console.WriteLine(count);*/
+
+/*Console.Write("введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int GetCountNumber(int number)
+{
+    int count = 0;
+    while(number>0)
+    {
+        count++;
+        number/=10;
+    }
+    return count;
+}
+Console.WriteLine($"количество цифр: {GetCountNumber(num)}");*/
+
+//прог зад массив из 8 эл. рандомно заполняет массив 0 и 1//метод заполн массив и возвр заполн массив целых чисел
+int[] GetBinaryArray(int size)
+{
+    int[] array = new int[size];//получается массив из 0 на 8 эл
+    for(int i=0;i<size;i++)
+    {
+        array[i]=new Random().Next(2);
+    }
+    return array;
+} 
+int[] resultArray =  GetBinaryArray(8);
+Console.WriteLine(resultArray);
+
+//for (int i=0;i<resultArray.Length;i++)
+//{
+  //  Console.WriteLine(resultArray[i]+"   ");
+//}
+
+Console.WriteLine($"Массив:  [{String.Join(";",resultArray)}]");
